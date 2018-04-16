@@ -1,0 +1,20 @@
+{
+    "name"             : "recyger/encry-int",
+    "description"      : "Library encryption type integer",
+    "minimum-stability": "alpha",
+    "license"          : "proprietary",
+    "authors"          : [
+        {
+            "name" : "Recyger",
+            "email": "recyger@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "codeception/codeception": "2.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "recyger//encry//int//": "src"
+        }
+    }
+}
