@@ -71,7 +71,7 @@ class AbstractBase
      *
      * @return int
      */
-    public function getDictionarySize(): int
+    protected function getDictionarySize(): int
     {
         return $this->dictionarySize;
     }
@@ -83,7 +83,7 @@ class AbstractBase
      *
      * @return int
      */
-    public function getBlockCount(): int
+    protected function getBlockCount(): int
     {
         return $this->blockCount;
     }
@@ -95,7 +95,7 @@ class AbstractBase
      *
      * @return int
      */
-    public function getBytePerBlock(): int
+    protected function getBytePerBlock(): int
     {
         return $this->bytePerBlock;
     }
@@ -127,9 +127,9 @@ class AbstractBase
      */
     protected function getIndexByCode(string $code): int
     {
-        $index = mb_stripos($this->dictionary, $code);
+        $index = mb_strpos($this->dictionary, $code);
 
-        if (-1 === $index) {
+        if (false === $index) {
             throw new InProgressException('The ' . $code . ' out of bounds in dictionary!');
         }
 

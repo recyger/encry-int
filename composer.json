@@ -13,8 +13,14 @@
         "codeception/codeception": "2.4.1"
     },
     "autoload": {
+        "files": ["src/functions.php"],
         "psr-4": {
-            "recyger//encry//int//": "src"
+            "recyger\\encry\\int\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "recyger\\tests\\encry\\int\\": "tests"
         }
     }
 }
